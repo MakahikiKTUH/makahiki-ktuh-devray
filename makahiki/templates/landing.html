@@ -3,7 +3,7 @@
 {% load markup %}
 
 {% block page_title %}
-    Welcome to KukuiCup!
+    KTUH Pledge-A-Thon®
 {% endblock %}
 
 
@@ -59,22 +59,9 @@
             <div id="landing-sponsors-list">
                 {% for sponsor in CHALLENGE.sponsor_set.all %}
                     {% if forloop.first %}
-                        <h4>Sponsored by:</h4>
                     {% endif %}
-                    <a href="{{ sponsor.url }}">
-                        <img
-                                {% if sponsor.logo_url %}
-                                    src="{{ sponsor.logo_url }}"
-                                {% else %}
-                                    src="{{ sponsor.logo.url }}"
-                                {% endif %}
-                                    title="{{ sponsor.name }}"
-                                />
-                    </a>
                 {% endfor %}
             </div>
-            <a class="contact-link" href="mailto:{{ CHALLENGE.contact_email }}">Contact the Kukui Cup
-                administrators</a>
         </div>
     </div>
     <script type="text/javascript">
